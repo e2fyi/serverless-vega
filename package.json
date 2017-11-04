@@ -1,0 +1,58 @@
+{
+  "name": "serverless-vega",
+  "version": "1.0.0",
+  "description": "API to serve Vega and Vega-Lite charts with serverless framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npx serverless deploy",
+    "remove": "npx serverless remove"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e2fyi/serverless-vega.git"
+  },
+  "keywords": [
+    "serverless",
+    "vega",
+    "vega-lite",
+    "chart",
+    "data",
+    "visualization",
+    "aws",
+    "gcp",
+    "google",
+    "cloud",
+    "api"
+  ],
+  "author": "eterna2@hotmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/e2fyi/serverless-vega/issues"
+  },
+  "homepage": "https://github.com/e2fyi/serverless-vega#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "eslint": "^4.6.1",
+    "eslint-config-google": "^0.7.0",
+    "eslint-config-prettier": "^2.5.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "gulp": "^3.9.1",
+    "husky": "^0.14.3",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.5.5",
+    "lint-staged": "^4.2.1",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "prettier": "^1.7.0",
+    "serverless": "^1.24.0",
+    "serverless-google-cloudfunctions": "^1.1.0",
+    "serverless-secrets-plugin": "^0.1.0"
+  },
+  "dependencies": {
+    "lz-string": "^1.4.4",
+    "vega": "^3.0.7",
+    "vega-lite": "^2.0.0",
+    "vega-schema-url-parser": "^1.0.0-beta.3"
+  }
+}

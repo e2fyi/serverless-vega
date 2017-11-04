@@ -1,0 +1,33 @@
+{
+  "extends": ["eslint:recommended", "google", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "amd": true,
+    "mocha": true
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": false,
+        "jsxBracketSameLine": false
+      }
+    ],
+    "no-invalid-this": "off",
+    "brace-style": "off",
+    "new-cap": ["error", {"capIsNewExceptions": []}],
+    "no-var": "off",
+    "require-jsdoc": "off",
+    "comma-dangle": ["error", "never"],
+    "arrow-parens": ["error", "as-needed"],
+    "no-console": ["error", {"allow": ["warn", "error"]}]
+  },
+  "globals": {}
+}

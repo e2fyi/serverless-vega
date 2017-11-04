@@ -1,0 +1,50 @@
+service: serverless-vega
+
+provider:
+  name: google
+  runtime: nodejs
+  project: e2fyi-185012
+  credentials: ~/.gcloud/keyfile.json # needs absolute
+  memorySize: 128
+  timeout: 3s
+
+plugins:
+  - serverless-google-cloudfunctions
+
+# needs more granular excluding in production as only the serverless provider npm
+# package should be excluded (and not the whole node_modules directory)
+package:
+  exclude:
+    - test/**
+    - app/**
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+functions:
+  vg:
+    handler: vg
+    events:
+      - http: path
+  #serialize:
+  #  handler: serialize
+
+  # NOTE: the following uses an "event" event (pubSub event in this case).
+  # Please create the corresponding resources in the Google Cloud
+  # before deploying this service through Serverless
+
+  #second:
+  #  handler: event
+  #  events:
+  #    - event:
+  #        eventType: providers/cloud.pubsub/eventTypes/topic.publish
+  #        resource: projects/*/topics/my-topic
+
+# you can define resources, templates etc. the same way you would in a
+# Google Cloud deployment configuration
+# resources:
+#  resources:
+#    - type: storage.v1.bucket
+#      name: serverless-service-bucket
+#  imports:
+#    - path: my_template.jinja
